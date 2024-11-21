@@ -1,0 +1,243 @@
+.pictures-section {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.image-slider {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 15px;
+  box-sizing: border-box;
+  flex: 0 0 400px;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: 20px;
+  color: white;
+  opacity: 1;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.side-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 400px;
+  width: 800px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.images {
+  width: 400px;
+  height: 400px;
+}
+
+.side-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.joystick-container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ccc;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.joystick-button {
+  width: 80px;
+  height: 80px;
+  background-color: #3f51b5;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.animate-joystick {
+  animation: wiggle 0.8s ease-in-out;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, 0);
+  }
+  50% {
+    transform: translate(0, 20px);
+  }
+  75% {
+    transform: translate(-20px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.chart-section {
+  margin-top: 100px;
+}
+
+.video-parameters-container {
+  display: flex;
+  justify-content: space-around;
+  height: 400px;
+}
+
+.video {
+  height: 300px;
+  width: 500px;
+}
+
+.parameters-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  height: 300px;
+  justify-content: space-between;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.parameters-section h3 {
+  font-size: 24px;
+  color: #3f51b5;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.parameters-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.parameters-section li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #f7f7f7;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.parameters-section li:hover {
+  background: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.parameters-section li span {
+  font-weight: bold;
+  color: #4caf50;
+  animation: blink 1s infinite step-start;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.parameters-section .active {
+  color: #4caf50;
+}
+
+.parameters-section .inactive {
+  color: #f44336;
+}
+
+.parameters-section {
+  background: linear-gradient(45deg, #f0f0f0 25%, #ffffff 25%, #f0f0f0 50%, #ffffff 50%, #f0f0f0 75%, #ffffff 75%);
+  background-size: 100% 100%;
+  animation: moveBackground 10s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400% 0;
+  }
+}
